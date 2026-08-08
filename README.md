@@ -1,68 +1,97 @@
-# Windows-7-on-modern-hardware
-Here I'll list all available tools, tweaks and infos on how to install Windows 7 on modern/unsupported hardware.
+# Windows 7 on Modern Hardware
 
-Windows 7 is a beloved operating system released by Microsoft in 2009. Many people look back on it as the best operating system ever made and I'd have to lie if I say that it isn't also my favorite.
-Growing up with it, it taught me much about how Windows and the world of computers work. But as of 2020, support has been discontinued and the OS has gotten obsolete.
-For a lot of people, Windows 10/11 just isn't up to par with Windows 7 and want to return to it. But as you might have noticed, Windows 7 doesn't really wanna install on "modern" hardware as easily as it used to.
-But enough with the chit chat, let's get to it.
-In this repo I wanna share all tips, tweaks and software that might make Windows 7 usable again. 
+Here I'll collect tools, tweaks, drivers, patches, and information for installing and running Windows 7 on modern or otherwise unsupported hardware.
 
-# Frameworks Updates Patches and Tweaks
-In this repo you can find important software and files to improve your Windows 7 experience: 
+Windows 7 is a beloved operating system released by Microsoft in 2009. Many people still look back on it as one of the best operating systems ever made, and I'd be lying if I said it wasn't also my favorite.
+
+Growing up with Windows 7, it taught me a lot about how Windows and computers in general work. However, official support ended in 2020, and the OS has become increasingly difficult to use on modern hardware.
+
+For many people, Windows 10 and Windows 11 simply aren't up to par with Windows 7, and going back can be surprisingly difficult. Modern systems often lack native Windows 7 drivers, legacy BIOS support, USB support during installation, and various other things Windows 7 expects to be there.
+
+But enough chit-chat. Let's get to it.
+
+This repository is intended to collect useful tools, tweaks, drivers, software, and guides that can help make Windows 7 usable on modern hardware again.
+
+## Frameworks, Updates, Patches, and Tweaks
+
+The following repository contains a large collection of software, compatibility fixes, updates, and other useful files for improving the Windows 7 experience:
+
 https://github.com/kuba2k2/i-use-win7-btw
 
-# Installation Media
-A detailed process involving the preparation of installation media, integrating the old ISO files with modern hardware drivers, and troubleshooting tips can be found in this repo:
+## Installation Media
+
+Installing Windows 7 on modern hardware often requires modifying the original installation media by integrating USB, storage, NVMe, and other drivers.
+
+A detailed guide covering installation-media preparation, driver integration, and troubleshooting can be found here:
+
 https://github.com/rileyclos/ModernOldWin/
 
+## Drivers
 
+One of the biggest problems when running Windows 7 on modern hardware is driver support.
 
+Many manufacturers stopped releasing Windows 7 drivers years ago, so depending on your hardware, you may need older official drivers, modified drivers, or community-made solutions.
 
-# Drivers
-One issue you might have come across are drivers. Many manufacturers don't make drivers for Windows 7 anymore which is obviously a problem for this undertaking.
+### NVIDIA
 
-Nvidia Drivers:
-[https://www.nvidia.com/download/driverResults.aspx/180551/en-us/](https://www.nvidia.com/Download/index.aspx?lang=en-us)
-Somewhat up to date drivers for Nvidia GPUs.
-All GPUs up to the RTX 30 generation have official drivers released by Nvidia.
-RTX 40 Series cards do not have official drivers by Nvidia and unless you're gonna write the drivers yourself, it's not gonna work.
+Official Windows 7 NVIDIA driver:
 
-AMD Drivers:
+https://www.nvidia.com/download/driverResults.aspx/180551/en-us/
+
+Windows 7 has official NVIDIA support for GPUs up to the RTX 30 series.
+
+RTX 40-series and newer cards do not have official Windows 7 drivers. Unless compatible community drivers or modifications exist for your particular card, they generally won't work properly under Windows 7.
+
+### AMD
+
+AMD Windows 7 driver package:
 
 https://www.amd.com/en/support/kb/release-notes/rn-rad-win-21-5-2
 
+### Chipset, USB, and Other Drivers
 
-Chipset and other drivers:
+Win-Raid has several useful guides and driver packages for modern chipsets and controllers.
+
+Modern AMD USB 3.0 / 3.1 drivers:
 
 https://winraid.level1techs.com/t/solution-win7-8-1-drivers-for-usb-3-0-3-1-controllers-of-new-amd-chipset-systems/33603/2
 
+Installing Windows 7 on modern Intel systems:
+
 https://winraid.level1techs.com/t/video-how-to-get-win7-installed-onto-modern-intel-chipset-systems-with-an-8th-gen-cpu-plus-drivers/33570
 
-Many drivers are avaliable on the WinRaid site:
+More Windows 7 and Vista driver resources can be found in the Win-Raid Windows section:
+
 https://winraid.level1techs.com/c/operating-systems/windows-7-vista-server-2008/35/none
 
+## Installing Windows 7 on UEFI Class 3 Systems
 
-# Enabling Windows 7 Installation on UEFI Class 3 Systems
+Modern systems may use UEFI Class 3 firmware without a Compatibility Support Module (CSM) or legacy BIOS functionality.
 
-To install Windows 7 on hardware with UEFI Class 3 systems, lacking legacy BIOS support, "UefiSeven" offers a crucial workaround. This EFI loader emulates the necessary Int10h interrupts, allowing Windows 7 to boot where it otherwise couldn't.
-Visit the repo here: https://github.com/manatails/uefiseven
+Windows 7 normally expects legacy VGA BIOS functionality during boot, which can prevent it from starting on these systems.
 
+**UefiSeven** provides a workaround by emulating the required INT 10h functionality, allowing Windows 7 to boot on hardware where it otherwise wouldn't.
 
-# Streamlining Windows 7 and Server 2008 R2 Updates with UpdatePack7R2
+Repository:
 
-UpdatePack7R2 offers a seamless solution for integrating and installing the latest updates for Windows 7 SP1 and Server 2008 R2 SP1 systems. This comprehensive package supports all versions and architectures, simplifying the process of keeping your system up to date. For a detailed guide on using UpdatePack7R2 to streamline your updates, visit this webpage:
+https://github.com/manatails/uefiseven
+
+## Windows 7 Updates with UpdatePack7R2
+
+**UpdatePack7R2** provides a convenient way to integrate and install updates for Windows 7 SP1 and Windows Server 2008 R2 SP1.
+
+It supports multiple editions and architectures and can significantly simplify the process of bringing a fresh Windows 7 installation up to date.
+
+More information and downloads:
+
 https://blog.simplix.info/update7/
-(website is in ukrainian)
 
+> Note: The website is in Ukrainian.
 
-# Tiny7
-Tiny7 is a lightweight Windows 7 version
+## Tiny7
+
+Tiny7 is a heavily stripped-down and lightweight version of Windows 7.
+
+Archive:
+
 https://archive.org/details/Windows_Tiny7
-
-
-
-
-
-
-
-
