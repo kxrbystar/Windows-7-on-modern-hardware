@@ -64,6 +64,12 @@ More Windows 7 and Vista driver resources can be found in the Win-Raid Windows s
 
 https://winraid.level1techs.com/c/operating-systems/windows-7-vista-server-2008/35/none
 
+### Backported modern Graphics drivers
+
+Custom backport of drivers for modern GPUs:
+
+https://w7revived.chefkiss.dev/WDDM2_Backport/Win7/
+
 ## Installing Windows 7 on UEFI Class 3 Systems
 
 Modern systems may use UEFI Class 3 firmware without a Compatibility Support Module (CSM) or legacy BIOS functionality.
